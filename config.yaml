@@ -1,0 +1,28 @@
+emulator:
+  name: LDPlayer
+  adb_host: 127.0.0.1
+  adb_port: 5555
+  adb_path: "adb"
+  emulator_exe: "C:/LDPlayer/LDPlayer9/dnplayer.exe"
+  wait_boot: 30
+
+game:
+  name: 奇迹暖暖
+  package: com.netease.nikki
+  activity: com.netease.nikki.MainActivity
+  wait_launch: 10
+
+ai:
+  provider: openai         # openai 或 anthropic
+  model: gpt-4o
+  api_key: "YOUR_API_KEY_HERE"
+  max_steps: 30
+  confidence_threshold: 0.8
+
+logging:
+  level: INFO
+  file: logs/agentx.log
+
+report:
+  enabled: true
+  output_dir: reports/
